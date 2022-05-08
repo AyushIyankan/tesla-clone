@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+
+//Components
+import Header from "./Header";
 import Section from "./Section";
 
-import data from "./data.json";
+//data
+import data from "../data.json";
 
 function Home() {
   return (
     <Container>
+      {/* Header */}
+      <Header />
+      {/* Sections Mapping */}
       {data.map((prop) => {
         return <Section {...prop} />;
       })}
